@@ -57,7 +57,9 @@ Follow these steps to set up the project locally:
 
 3. Copy the `.env.example` file to `.env` and configure the required variables.
 
-4. Start the application:
+4. Copy the `instructions.example.txt` file to `instructions.txt` and write the instructions.
+
+5. Start the application:
    ```bash
    npm start
    ```
