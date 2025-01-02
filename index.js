@@ -1,4 +1,5 @@
 const { readFile } = require('fs/promises');
+const { existsSync } = require('fs');
 const express = require('express');
 const OpenAI = require('openai');
 const app = express();
@@ -34,11 +35,14 @@ async function generateNextMessage({ lastMessage, started }) {
         if(!started) {
             sessionPrice = 0;
 
-            messages.push({
-                role: 'system',
-                content: await readFile('instructions.txt', 'utf8')
-            });
-        }
+            if(existsSync('instructions.txt')) {
+                const instructions = await readFile('instructions.txt', 'utf8');
+
+                messages.push({
+                    role: 'system',
+                    content: instructions
+                });
+            }
 
         if (!lastMessage) {
             return 'Não entendi, pode repetir ou digitar novamente?'
