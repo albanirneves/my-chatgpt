@@ -43,6 +43,7 @@ async function generateNextMessage({ lastMessage, started }) {
                     content: instructions
                 });
             }
+        }
 
         if (!lastMessage) {
             return 'Não entendi, pode repetir ou digitar novamente?'
