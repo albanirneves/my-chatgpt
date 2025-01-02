@@ -1,13 +1,13 @@
 {
-  "name": "server",
+  "name": "my-chatgpt",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is a web-based chat application powered by OpenAI's GPT technology. Users can interact with the chat system to receive AI-generated responses, and the application includes features for dynamic pricing based on token usage during sessions.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Albanir Neves <albanirneves.dev@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
